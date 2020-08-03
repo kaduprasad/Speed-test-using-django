@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+body {
+  background: #0d0836;
+}
+
+h1 {
+  color: white;
+  font-family: verdana;
+  font-size: 300%;
+  text-align: center;
+  padding: 20px;
+}
+
+ul {
+  padding: 5px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0d0836;
+}
+
+li {
+  float: left;
+}
+
+li form button {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
+  background-color: #0d0836;
+  font-family: verdana;
+  border: none;
+  font-size:110%;
+}
+
+li form button:hover:not(.active) {
+  background-color: #1a66ff;
+}
+</style>
+
+<h1>Home</h1>
+
+<nav>
+    <ul>
+        <li>
+            <form action="/accounts/signup/" method="post">
+                {% csrf_token %}
+                <button type="submit">SignUp</button>
+            </form>
+        </li>
+
+        <li>
+            <form action="/accounts/login/" method="post">
+                {% csrf_token %}
+                <button type="submit">Login</button>
+            </form>
+        </li>
+
+         <li>
+            <form action="/accounts/logout/" method="post">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        </li>
+
+        <li>
+            <form action="/downloadSpeed/" method="post">
+                {% csrf_token %}
+                <button type="submit">Download Speed</button>
+            </form>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>
