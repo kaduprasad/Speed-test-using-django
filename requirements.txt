@@ -1,0 +1,10 @@
+(first install pip and set environment variable for it)
+
+pip install django
+pip install speedtest-cli
+pip install matplot
+
+--- django commands to run the APP ---
+--go to app folder (netspeed) where manage.py file is there--
+
+python manage.py runserver  (command)
